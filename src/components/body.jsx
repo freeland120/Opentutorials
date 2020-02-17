@@ -5,15 +5,9 @@ class Subject_body extends Component {
     return (
       <nav>
         <ul>
-          <li>
-            <a href="1.html">HTML</a>
-          </li>
-          <li>
-            <a href="2.html">CSS</a>
-          </li>
-          <li>
-            <a href="3.html">Javascript</a>
-          </li>
+          <li>{this.props.grade}</li>
+          <li>{this.props.rank}</li>
+          <li></li>
         </ul>
       </nav>
     );

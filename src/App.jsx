@@ -5,12 +5,25 @@ import Subject_body from "./components/body";
 import Subject_footer from "./components/footer";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      subject: { title: "English", sub: "Computer Science" },
+      midterm: { grade: "90", rank: "1" }
+    };
+  }
   render() {
     return (
       <div>
-        <Subject title="WEB1.0" />
-        <Subject title="WEB2.0" />
-        <Subject_body />
+        <Subject
+          title={this.state.subject.title}
+          sub={this.state.subject.sub}
+        />
+
+        <Subject_body
+          grade={this.state.midterm.grade}
+          rank={this.state.midterm.rank}
+        />
         <Subject_footer />
       </div>
     );

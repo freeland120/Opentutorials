@@ -6,6 +6,7 @@ class Subject extends Component {
       <div>
         <header>
           <h1>{this.props.title}</h1>
+          <h2>{this.props.sub}</h2>
         </header>
       </div>
     );
