@@ -2,11 +2,19 @@ import React, { Component } from "react";
 
 class Subject_footer extends Component {
   render() {
-    return (
-      <footer>
-        <h3>Copyright YDG</h3>
-      </footer>
-    );
+    const lists = [];
+    const students = this.props.data;
+
+    for (let i = 0; i < students.length; i++) {
+      lists.push(
+        <div key={students[i].id}>
+          {students[i].name}
+          <br />
+          {students[i].age}
+        </div>
+      );
+    }
+    return <footer>{lists}</footer>;
   }
 }
 

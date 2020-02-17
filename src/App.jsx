@@ -9,7 +9,12 @@ class App extends Component {
     super(props);
     this.state = {
       subject: { title: "English", sub: "Computer Science" },
-      midterm: { grade: "90", rank: "1" }
+      midterm: { grade: "90", rank: "1" },
+      students: [
+        { id: 1, name: "YDG", age: "27" },
+        { id: 2, name: "LYS", age: "27" },
+        { id: 3, name: "KMH", age: "30" }
+      ]
     };
   }
   render() {
@@ -24,7 +29,7 @@ class App extends Component {
           grade={this.state.midterm.grade}
           rank={this.state.midterm.rank}
         />
-        <Subject_footer />
+        <Subject_footer data={this.state.students} />
       </div>
     );
   }
