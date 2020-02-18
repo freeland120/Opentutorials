@@ -4,7 +4,7 @@ class Subject_footer extends Component {
   render() {
     const lists = [];
     const students = this.props.data;
-
+    console.log(students.length);
     for (let i = 0; i < students.length; i++) {
       lists.push(
         <div key={students[i].id}>
